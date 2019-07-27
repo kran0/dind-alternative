@@ -15,6 +15,7 @@ ARG DOCKER_PACKAGES=docker
 # && groupadd dockerroot\
 
 RUN yum -y install docker iptables\
+ && yum clean all && rm -rf /var/cache/yum\
  && useradd -M -s /bin/false dockremap\
  && echo "dockremap:524288:65536" >> /etc/subuid\
  && echo "dockremap:524288:65536" >> /etc/subgid\
