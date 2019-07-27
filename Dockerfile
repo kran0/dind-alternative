@@ -9,10 +9,8 @@ ARG DOCKER_PACKAGES=docker
 # 1.13.1-94.gitb2f74b2
 # 1.13.1-96.gitb2f74b2
 
-#uncomment this to use docker-ce
-#RUN yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo\
-# && yum -y install docker-ce iptables\
-# && groupadd dockerroot\
+# Yes this Dockerfile wirod well with docker-ce.
+# But docker:dind alpine based image is way better choice.
 
 RUN yum -y install docker iptables openssl\
  && yum clean all && rm -rf /var/cache/yum\
