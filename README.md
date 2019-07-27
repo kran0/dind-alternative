@@ -1,14 +1,13 @@
-# dind-alternative
-Alternative DIND docker in docker distribution.
+# Alternative DIND docker in docker distribution.
 
-# Why do you need alternate dind?
+## Why do you need alternate dind?
 
 RHEL/Centos docker daemon differs from the official one.
  You can compare `dockerd --help` with `dockerd-ce --help`.
  Main difference for me is `--add-registry` parameter,
  which is not supported by CE and official dockerd daemons.
 
-# How to use?
+## How to use?
 
 This image is based on the [official dind](https://hub.docker.com/_/docker)
  and it must be fully compatible with it.
@@ -18,8 +17,6 @@ Please watch [official dind](https://hub.docker.com/_/docker) image.
 
 You need this alternative dind distribution only if you know what you doing!
 
-# How to run?
-
 ```bash
 $ docker run --privileged --name dind -d \
    -p -p 2375:2375 \
@@ -28,7 +25,7 @@ $ docker run --privileged --name dind -d \
 
 ```
 
-# Tags
+## Tags
 
 [Automated builds](https://hub.docker.com/r/kran0/dind-centos/tags/).
 
