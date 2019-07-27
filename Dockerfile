@@ -1,6 +1,13 @@
 FROM centos:7
 
 ARG DOCKER_PACKAGES=docker
+# yum list docker --showduplicates
+# 1.13.1-75.git8633870
+# 1.13.1-84.git07f3374
+# 1.13.1-88.git07f3374
+# 1.13.1-91.git07f3374
+# 1.13.1-94.gitb2f74b2
+# 1.13.1-96.gitb2f74b2
 
 #uncomment this to use docker-ce
 #RUN yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo\

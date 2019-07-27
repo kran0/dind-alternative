@@ -3,7 +3,7 @@
 echo "------ HOOK START - BUILD -------"
 
 BUILD_ARGS=DOCKER_PACKAGES="docker"
-[ "$DOCKER_TAG" = "latest" ] || BUILD_ARGS="DOCKER_PACKAGES=$DOCKER_TAG"
+[ "$DOCKER_TAG" = "latest" ] || BUILD_ARGS="DOCKER_PACKAGES=docker-$DOCKER_TAG.el7.centos"
 
 docker build $BUILD_ARGS -t $IMAGE_NAME .
 
