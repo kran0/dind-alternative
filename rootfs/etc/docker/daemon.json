@@ -1,0 +1,6 @@
+{
+  "storage-driver": "overlay2",
+  "userns-remap":   "default",
+  "live-restore":    true,
+  "group":          "dockerroot"
+}
