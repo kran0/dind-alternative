@@ -5,7 +5,7 @@ Alternative DIND docker in docker distribution.
 
 RHEL/Centos docker daemon differs from the official one.
  You can compare `dockerd --help` with `dockerd-ce --help`.
- Main difference for me is `--add-registry` flag,
+ Main difference for me is `--add-registry` parameter,
  which is not supported by CE and official dockerd daemons.
 
 # How to use?
@@ -21,7 +21,6 @@ You need this alternative dind distribution only if you know what you doing!
 # How to run?
 
 ```bash
-
 $ docker run --privileged --name dind -d \
    -p -p 2375:2375 \
    -v dind-storage:/var/lib/docker \
