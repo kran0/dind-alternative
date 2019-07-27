@@ -1,11 +1,13 @@
 FROM centos:7
 
+ARG DOCKER_PACKAGES=docker
+
 #uncomment this to use docker-ce
 #RUN yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo\
 # && yum -y install docker-ce iptables\
 # && groupadd dockerroot\
 
-RUN yum -y install docker-ce iptables\
+RUN yum -y install docker iptables\
  && useradd -M -s /bin/false dockremap\
  && echo "dockremap:524288:65536" >> /etc/subuid\
  && echo "dockremap:524288:65536" >> /etc/subgid\

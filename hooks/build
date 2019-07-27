@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo "------ HOOK START - BUILD -------"
+
+BUILD_ARGS=DOCKER_PACKAGES="docker"
+[ "$DOCKER_TAG" = "latest" ] || BUILD_ARGS="DOCKER_PACKAGES=$DOCKER_TAG"
+
+docker build $BUILD_ARGS -t $IMAGE_NAME .
+
+echo "------ HOOK END - BUILD -------"
