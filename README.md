@@ -23,11 +23,9 @@ You need this alternative dind distribution only if you know what you doing!
 ```bash
 
 $ docker run --privileged --name dind -d \
-   --network some-network --network-alias docker \
-   -e DOCKER_TLS_CERTDIR=/certs \
-   -v some-docker-certs-ca:/certs/ca \
-   -v some-docker-certs-client:/certs/client \
-   kran0/dind-centos:latest
+   -p -p 2375:2375 \
+   -v dind-storage:/car/lib/docker \
+   kran0/dind-centos:latest --add-registry registry.company.name:5000
 
 ```
 
