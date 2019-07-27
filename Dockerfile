@@ -9,7 +9,7 @@ ARG DOCKER_PACKAGES=docker
 # 1.13.1-94.gitb2f74b2
 # 1.13.1-96.gitb2f74b2
 
-# Yes this Dockerfile wirod well with docker-ce.
+# Yes this Dockerfile works well with docker-ce.
 # But docker:dind alpine based image is way better choice.
 
 RUN yum -y install docker iptables openssl\
