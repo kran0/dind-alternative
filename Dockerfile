@@ -14,7 +14,7 @@ ARG DOCKER_PACKAGES=docker
 # && yum -y install docker-ce iptables\
 # && groupadd dockerroot\
 
-RUN yum -y install docker iptables\
+RUN yum -y install docker iptables openssl\
  && yum clean all && rm -rf /var/cache/yum\
  && useradd -M -s /bin/false dockremap\
  && echo "dockremap:524288:65536" >> /etc/subuid\
