@@ -24,7 +24,7 @@ You need this alternative dind distribution only if you know what you doing!
 
 $ docker run --privileged --name dind -d \
    -p -p 2375:2375 \
-   -v dind-storage:/car/lib/docker \
+   -v dind-storage:/var/lib/docker \
    kran0/dind-centos:latest --add-registry registry.company.name:5000
 
 ```
