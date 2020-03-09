@@ -2,12 +2,10 @@ FROM centos:7
 
 ARG DOCKER_PACKAGES=docker
 # yum list docker --showduplicates
-# 1.13.1-75.git8633870
-# 1.13.1-84.git07f3374
-# 1.13.1-88.git07f3374
-# 1.13.1-91.git07f3374
-# 1.13.1-94.gitb2f74b2
-# 1.13.1-96.gitb2f74b2
+# 1.13.1-102.git7f2769b
+# 1.13.1-103.git7f2769b
+# 1.13.1-108.git4ef4b30
+# 1.13.1-109.gitcccb291
 
 # Yes this Dockerfile works well with docker-ce.
 # But docker:dind alpine based image is way better choice.
